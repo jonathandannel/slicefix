@@ -1,28 +1,26 @@
-A simple Python script for editing Photoshop slice generated HTML for use with e-blasts.
+A simple Python script for editing Photoshop slice generated HTML.
 
 ## Requirements
 
 - Python 3. Run `which python3`; If not found, install with Homebrew, apt, or whatever else you use. Once it is installed, make sure the shebang path at the start of the script (ex: `#!/usr/bin/python3`) matches where your Python 3 is installed.
 
-## Use pip 3 to install dependencies:
+## Install with pip 3:
 
-`pip3` will be installed with your Python 3 install.
+Run `pip3 install slicefix-jonathandannel`.
 
-- Run `pip3 install -r requirements.txt`. This will install the bs4 and datetime packages. You can also install them manually, if you like. The script will not work if you skip this step.
+<https://pypi.org/project/slicefix-jonathandannel/>
+
+The script, once installed with pip, can be called with the `scriptslice` command from your terminal. The install script automatically adds it to your path.
 
 ## Usage
 
-`python3 fix.py -f some-html-file-1942.html -d yourdomainhere.ca`
+`slicefix -f some-html-file.html -d imagedomain.ca`
 
-The script takes two arguments, `-f` (file) and `-d` (domain).
+`slicefix` takes two arguments: `-f` (file) and `-d` (domain).
 
 ### -f
 
-The .html file you want to fix. If you're running the script in the same directory as the HTML file, then all you have to do is type in/paste the file name. You can also specify a path (this is better)
-
-For example, if your `fix.py` is in your `~/` or `/home/` directory, and your HTML file is located in `~/Downloads/eblasts`, you would navigate to `~/` and run `python3 fix.py --file ~/Downloads/eblasts/some-html-file-1942.html --domain yourdomainhere.ca`. The output file will be generated in the same directory as the HTML file input.
-
-You can also move `fix.py` into whatever directory contains the HTML file and run it from there, so you don't have to type out the path to the file.
+The .html file you want to fix. If you're in the same directory as the HTML file, then all you have to do is type in/paste the file name. You can also specify a full path to the file.
 
 ### -d
 
@@ -40,8 +38,13 @@ The domain (without `http://`) where the images in the HTML are hosted. For exam
 - Depending on usage, I could work a bit more on customizing where the file is saved or generated.
 - Add batch file support, more CLI args.
 
+## Done
+
+- Package and serve from PyPi
+- Alias the command
+
 ## Also
 
-You'll still need to edit the SEO text and client address text manually.
+For now, you'll still need to edit the SEO text and client address text manually.
 
 Feel free to contribute more features if you like. It's simple now, but it could end up being pretty useful in the future.
