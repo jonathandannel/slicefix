@@ -6,6 +6,11 @@ from datetime import datetime
 import slicefix
 import re
 
+# TODO: Telephone numbers need `cm_dontconvertlink` prop
+# e.g. <a href="tel:2895534156" cm_dontconvertlink>
+
+# TODO: Add _blank target for links
+
 
 def get_cli_args():
     cli_parser = OptionParser()
@@ -93,5 +98,6 @@ def fix_and_save():
     add_image_domains(image_domain, HTML_OBJECT)
     write_new_file(html_src_path, HTML_OBJECT)
 
+
 if __name__ == '__main__':
-  fix_and_save()
+    fix_and_save()
