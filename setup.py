@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="slicefix-jonathandannel", # Replace with your own username
-    version="2.7.10",
+    version="3.7.10",
     author="Jonathan Dannel",
     author_email="usixjad@gmail.com",
     description="A simple script for formatting Photoshop HTML generated from image slicing",
